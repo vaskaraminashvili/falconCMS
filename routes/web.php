@@ -15,7 +15,7 @@ use Inertia\Inertia;
 */
 
 // Route::inertia('/', 'Welcome');
-
-Route::get('/', function () {
-    return Inertia::render('Welcome');
+$page_prefix = 'Web/Pages/';
+Route::get('/', function () use ($page_prefix) {
+    return Inertia::render($page_prefix.'Welcome');
 });
