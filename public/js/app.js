@@ -19433,7 +19433,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 
-var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" this is lauoyut ");
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" admin lay out ");
 
 function render(_ctx, _cache) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [_hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "default")]);
@@ -19474,7 +19474,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 
-var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" front layout ");
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" front layout !! ");
 
 function render(_ctx, _cache) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [_hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "default")]);
@@ -19508,17 +19508,15 @@ _inertiajs_progress__WEBPACK_IMPORTED_MODULE_3__.InertiaProgress.init();
   resolve: function resolve(name) {
     var page;
 
-    if (!name.startsWith('Web/')) {
+    if (name.startsWith('@.')) {
       // load this direcotry for admin
+      name = name.replace('@.', '');
       page = __webpack_require__("./resources/js/Admin/Pages sync recursive ^\\.\\/.*$")("./".concat(name))["default"];
-    } else {
-      // load this direcotry for websiste
-      page = __webpack_require__("./resources/js sync recursive ^\\.\\/.*$")("./".concat(name))["default"];
-    }
-
-    if (page.layout === undefined && !name.startsWith('Web/')) {
       page.layout = _Admin_Shared_Layout_Layout_vue__WEBPACK_IMPORTED_MODULE_4__["default"];
     } else {
+      // load this direcotry for websiste
+      name = name.replace('@web.', '');
+      page = __webpack_require__("./resources/js/Web/Pages sync recursive ^\\.\\/.*$")("./".concat(name))["default"];
       page.layout = _Web_Shared_Layout_Layout_vue__WEBPACK_IMPORTED_MODULE_5__["default"];
     }
 
@@ -19540,7 +19538,8 @@ _inertiajs_progress__WEBPACK_IMPORTED_MODULE_3__.InertiaProgress.init();
     });
     var URL = props.initialPage.url;
 
-    if (condition) {}
+    if (URL) {// here make auto loading of components for admin part
+    }
 
     console.log();
     app.mount(el);
@@ -26212,12 +26211,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _Welcome_vue_vue_type_template_id_160f7069__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Welcome.vue?vue&type=template&id=160f7069 */ "./resources/js/Admin/Pages/Welcome.vue?vue&type=template&id=160f7069");
-/* harmony import */ var D_wamp_www_falconCms_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var G_wamp_www_falconCms_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 const script = {}
 
 ;
-const __exports__ = /*#__PURE__*/(0,D_wamp_www_falconCms_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_1__["default"])(script, [['render',_Welcome_vue_vue_type_template_id_160f7069__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Admin/Pages/Welcome.vue"]])
+const __exports__ = /*#__PURE__*/(0,G_wamp_www_falconCms_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_1__["default"])(script, [['render',_Welcome_vue_vue_type_template_id_160f7069__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Admin/Pages/Welcome.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -26238,12 +26237,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _Layout_vue_vue_type_template_id_6a3cef03__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Layout.vue?vue&type=template&id=6a3cef03 */ "./resources/js/Admin/Shared/Layout/Layout.vue?vue&type=template&id=6a3cef03");
-/* harmony import */ var D_wamp_www_falconCms_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var G_wamp_www_falconCms_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 const script = {}
 
 ;
-const __exports__ = /*#__PURE__*/(0,D_wamp_www_falconCms_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_1__["default"])(script, [['render',_Layout_vue_vue_type_template_id_6a3cef03__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Admin/Shared/Layout/Layout.vue"]])
+const __exports__ = /*#__PURE__*/(0,G_wamp_www_falconCms_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_1__["default"])(script, [['render',_Layout_vue_vue_type_template_id_6a3cef03__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Admin/Shared/Layout/Layout.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -26264,12 +26263,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _Welcome_vue_vue_type_template_id_3e44e7ae__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Welcome.vue?vue&type=template&id=3e44e7ae */ "./resources/js/Web/Pages/Welcome.vue?vue&type=template&id=3e44e7ae");
-/* harmony import */ var D_wamp_www_falconCms_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var G_wamp_www_falconCms_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 const script = {}
 
 ;
-const __exports__ = /*#__PURE__*/(0,D_wamp_www_falconCms_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_1__["default"])(script, [['render',_Welcome_vue_vue_type_template_id_3e44e7ae__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Web/Pages/Welcome.vue"]])
+const __exports__ = /*#__PURE__*/(0,G_wamp_www_falconCms_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_1__["default"])(script, [['render',_Welcome_vue_vue_type_template_id_3e44e7ae__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Web/Pages/Welcome.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -26290,12 +26289,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _Layout_vue_vue_type_template_id_37f4b01e__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Layout.vue?vue&type=template&id=37f4b01e */ "./resources/js/Web/Shared/Layout/Layout.vue?vue&type=template&id=37f4b01e");
-/* harmony import */ var D_wamp_www_falconCms_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var G_wamp_www_falconCms_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 const script = {}
 
 ;
-const __exports__ = /*#__PURE__*/(0,D_wamp_www_falconCms_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_1__["default"])(script, [['render',_Layout_vue_vue_type_template_id_37f4b01e__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Web/Shared/Layout/Layout.vue"]])
+const __exports__ = /*#__PURE__*/(0,G_wamp_www_falconCms_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_1__["default"])(script, [['render',_Layout_vue_vue_type_template_id_37f4b01e__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Web/Shared/Layout/Layout.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -27527,23 +27526,15 @@ webpackContext.id = "./resources/js/Admin/Pages sync recursive ^\\.\\/.*$";
 
 /***/ }),
 
-/***/ "./resources/js sync recursive ^\\.\\/.*$":
-/*!*************************************!*\
-  !*** ./resources/js/ sync ^\.\/.*$ ***!
-  \*************************************/
+/***/ "./resources/js/Web/Pages sync recursive ^\\.\\/.*$":
+/*!***********************************************!*\
+  !*** ./resources/js/Web/Pages/ sync ^\.\/.*$ ***!
+  \***********************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var map = {
-	"./Admin/Pages/Welcome": "./resources/js/Admin/Pages/Welcome.vue",
-	"./Admin/Pages/Welcome.vue": "./resources/js/Admin/Pages/Welcome.vue",
-	"./Admin/Shared/Layout/Layout": "./resources/js/Admin/Shared/Layout/Layout.vue",
-	"./Admin/Shared/Layout/Layout.vue": "./resources/js/Admin/Shared/Layout/Layout.vue",
-	"./Web/Pages/Welcome": "./resources/js/Web/Pages/Welcome.vue",
-	"./Web/Pages/Welcome.vue": "./resources/js/Web/Pages/Welcome.vue",
-	"./Web/Shared/Layout/Layout": "./resources/js/Web/Shared/Layout/Layout.vue",
-	"./Web/Shared/Layout/Layout.vue": "./resources/js/Web/Shared/Layout/Layout.vue",
-	"./app": "./resources/js/app.js",
-	"./app.js": "./resources/js/app.js"
+	"./Welcome": "./resources/js/Web/Pages/Welcome.vue",
+	"./Welcome.vue": "./resources/js/Web/Pages/Welcome.vue"
 };
 
 
@@ -27564,7 +27555,7 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = "./resources/js sync recursive ^\\.\\/.*$";
+webpackContext.id = "./resources/js/Web/Pages sync recursive ^\\.\\/.*$";
 
 /***/ }),
 

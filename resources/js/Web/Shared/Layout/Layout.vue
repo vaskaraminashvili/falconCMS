@@ -1,6 +1,6 @@
 <template>
   <div>
-front layout
+front layout !!
 <slot/>
   </div>
 </template>

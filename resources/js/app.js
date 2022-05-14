@@ -12,17 +12,15 @@ InertiaProgress.init();
 createInertiaApp({
   resolve: name => {
     let page;
-    if (!name.startsWith('Web/')) {
+    if (name.startsWith('@.')) {
       // load this direcotry for admin
+      name = name.replace('@.', '');
       page = require(`./Admin/Pages/${name}`).default
-
-    } else {
-      // load this direcotry for websiste
-      page = require(`./${name}`).default
-    }
-    if (page.layout === undefined && !name.startsWith('Web/')) {
       page.layout = Layout
     } else {
+      // load this direcotry for websiste
+      name = name.replace('@web.', '');
+      page = require(`./Web/Pages/${name}`).default
       page.layout = WebLayout
     }
     return page
@@ -35,10 +33,10 @@ createInertiaApp({
       .component('Link', Link)
       .mixin({ methods: { route } });
     const URL = props.initialPage.url;
-    if (condition) {
-      
+    if (URL) {// here make auto loading of components for admin part
+
     }
     console.log();
     app.mount(el);
-  },
+  }
 })

@@ -4,18 +4,12 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 /*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
+// we do not to prefix to load front end pages. as it is in admin
+// for front side it is Web/Pages
 */
 
 // Route::inertia('/', 'Welcome');
-$page_prefix = 'Web/Pages/';
-Route::get('/', function () use ($page_prefix) {
-    return Inertia::render($page_prefix.'Welcome');
+
+Route::get('/', function () {
+    return Inertia::render('Welcome');
 });

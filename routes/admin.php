@@ -4,18 +4,12 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 /*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
+// @. use this in app js to change the directory of folder with to load.
+// for front side it is Admin/Pages
 */
 
 // Route::inertia('/', 'Welcome');
 
 Route::get('/', function () {
-    return Inertia::render('Welcome');
+    return Inertia::render('@.Welcome');
 })->name('Index');
