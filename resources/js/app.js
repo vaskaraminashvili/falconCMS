@@ -6,22 +6,22 @@ import Layout from "@/Admin/Shared/Layout/Layout.vue"
 import WebLayout from "@/Web/Shared/Layout/Layout.vue"
 
 
-InertiaProgress.init();
+
 
 
 createInertiaApp({
-  resolve: name => {
+  resolve: async name => {
     let page;
     if (name.startsWith('@.')) {
       // load this direcotry for admin
       name = name.replace('@.', '');
-      page = require(`./Admin/Pages/${name}`).default
-      page.layout = Layout
+      page = (await import(`./Admin/Pages/${name}`)).default
+      page.layout ??= Layout // if page does not have custom layout apply default
     } else {
       // load this direcotry for websiste
       name = name.replace('@web.', '');
-      page = require(`./Web/Pages/${name}`).default
-      page.layout = WebLayout
+      page = (await import(`./Web/Pages/${name}`)).default
+      page.layout ??= WebLayout // if page does not have custom layout apply default
     }
     return page
   },
@@ -36,7 +36,9 @@ createInertiaApp({
     if (URL) {// here make auto loading of components for admin part
 
     }
-    console.log();
     app.mount(el);
   }
 })
+
+
+InertiaProgress.init()

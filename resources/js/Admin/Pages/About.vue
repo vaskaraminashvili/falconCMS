@@ -1,8 +1,7 @@
 <template>
-    <div>
-      <Link :href="route('admin.index')">test admin</Link>
-
-    </div>
+  <div>
+    About page
+  </div>
 </template>
 
 <script setup>

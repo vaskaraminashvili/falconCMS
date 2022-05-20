@@ -1,0 +1,10 @@
+features I have done so
+
+we have persistent layout inside app.js
+have default layout for web and admin  inside app.js
+
+have progress bar but it is not working  inside app.js
+global components like      .component('Head', Head)
+
+link active state
+Code Splitting and Dynamic Imports //https://laracasts.com/series/build-modern-laravel-apps-using-inertia-js/episodes/14

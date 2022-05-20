@@ -12,4 +12,12 @@ use Inertia\Inertia;
 
 Route::get('/', function () {
     return Inertia::render('@.Welcome');
-})->name('Index');
+})->name('index');
+
+Route::get('/about', function () {
+    return Inertia::render('@.About');
+})->name('about');
+
+Route::get('/contact', function () {
+    return Inertia::render('@.Contact');
+})->name('contact');
