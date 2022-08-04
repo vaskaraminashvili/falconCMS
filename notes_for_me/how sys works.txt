@@ -1,0 +1,10 @@
+ok so in this project everything is separated for admin and for web site.
+-------
+rotes are separate we have routes/admin and routes web
+---------
+main files of APP are separate we have views/Admin/app.blade.php  ||||||||||| views/app.blade.php
+this is managed from  HandeInertiaRequests.php middleware  -> rootView
+
+-------
+in js we have separated views for admin and web it is managed from app.js file
+if view starts with '@.' it is for admin and loaded admin folder
