@@ -11,7 +11,10 @@ const mix = require('laravel-mix');
  |
  */
 const webpackConfig = require('./webpack.config');
-mix.js('resources/js/app.js', 'public/js')
+mix.browserSync({
+  proxy: "http://localhost:8000/"
+})
+  .js('resources/js/app.js', 'public/js')
   .extract()
   .webpackConfig(webpackConfig)
   .vue(3)
