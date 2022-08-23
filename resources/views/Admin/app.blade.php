@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr" class="dark chrome windows fontawesome-i2svg-active fontawesome-i2svg-complete">
 

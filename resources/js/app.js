@@ -13,9 +13,12 @@ import Card from "@/Admin/Shared/Components/Card.vue"
 createInertiaApp({
   resolve: async name => {
     let page;
+    let page_component;
     if (name.startsWith('@.')) {
       // load this direcotry for admin
       name = name.replace('@.', '');
+      name = name.replace('.', '/');
+      page_component = `./Admin/Pages/${name}`;
       page = (await import(`./Admin/Pages/${name}`)).default
       page.layout ??= Layout // if page does not have custom layout apply default
     } else {

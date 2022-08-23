@@ -8,3 +8,7 @@ this is managed from  HandeInertiaRequests.php middleware  -> rootView
 -------
 in js we have separated views for admin and web it is managed from app.js file
 if view starts with '@.' it is for admin and loaded admin folder
+
+also in routes file you can return deep component/Page like this     return Inertia::render('@.Module.Index');
+in app js DOTS will be replaces with forward slash /
+

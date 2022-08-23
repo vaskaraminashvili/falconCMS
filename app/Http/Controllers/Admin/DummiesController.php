@@ -3,13 +3,23 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Admin\Dummy;
 use App\Models\Article;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
-class ArticlesController extends Controller
+class DummiesController extends Controller
 {
     public function index()
     {
+        $data = Dummy::limit(100)->get();
+        $test = [
+            'name' => 'name here',
+            'add' => 'address here',
+        ];
+        return Inertia::render('@.Module.Index' , [
+            'data' => $data
+        ]);
 
     }
 

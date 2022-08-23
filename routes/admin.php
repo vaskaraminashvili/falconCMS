@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\DummiesController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -21,3 +22,11 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return Inertia::render('@.Contact');
 })->name('contact');
+
+Route::prefix('module')
+    ->name('module.')
+    ->group(function () {
+
+    Route::get('/' , [DummiesController::class , 'index'])->name('index');
+
+});

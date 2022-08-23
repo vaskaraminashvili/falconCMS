@@ -1,6 +1,9 @@
 <template>
   <div class="card">
-    <div class="card-body overflow-hidden p-lg-6">
+    <div class="card-header">
+      <slot name="header"></slot>
+    </div>
+    <div class="card-body">
       <slot/>
     </div>
   </div>
