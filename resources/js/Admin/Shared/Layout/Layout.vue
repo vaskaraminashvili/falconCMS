@@ -12,6 +12,8 @@
               <span class="navbar-toggle-icon"><span class="toggle-line"></span></span>
             </button>
           </div>
+
+
           <a class="navbar-brand" href="../index.html">
             <div class="d-flex align-items-center py-3">
               <img class="me-2" src="/myCms/assets/img/icons/spot-illustrations/falcon.png" alt="" width="40" />
@@ -24,8 +26,8 @@
             <ul class="navbar-nav flex-column mb-3" id="navbarVerticalNav">
               <li class="nav-item">
                 <!-- parent pages-->
-                <a class="nav-link dropdown-indicator" href="#dashboard" role="button"
-                  data-bs-toggle="collapse" aria-expanded="false" aria-controls="dashboard">
+                <a class="nav-link dropdown-indicator" href="#dashboard" role="button" data-bs-toggle="collapse"
+                  aria-expanded="false" aria-controls="dashboard">
                   <div class="d-flex align-items-center">
                     <span class="nav-link-icon"><span class="fas fa-chart-pie"></span></span><span
                       class="nav-link-text ps-1">Dashboard</span>
@@ -45,11 +47,11 @@
               </li>
               <li class="nav-item">
                 <!-- parent pages-->
-                <a class="nav-link dropdown-indicator" href="#settings" role="button"
-                   data-bs-toggle="collapse" aria-expanded="false" aria-controls="settings">
+                <a class="nav-link dropdown-indicator" href="#settings" role="button" data-bs-toggle="collapse"
+                  aria-expanded="false" aria-controls="settings">
                   <div class="d-flex align-items-center">
                     <span class="nav-link-icon"><span class="fas fa-chart-pie"></span></span><span
-                    class="nav-link-text ps-1">Settings</span>
+                      class="nav-link-text ps-1">Settings</span>
                   </div>
                 </a>
                 <ul class="nav collapse false" id="settings">
@@ -349,6 +351,14 @@
             </li>
           </ul>
         </nav>
+        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
+          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1322632741&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+        <div
+          style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+          <a href="https://soundcloud.com/megan-thee-stallion" title="Megan Thee Stallion" target="_blank"
+            style="color: #cccccc; text-decoration: none;">Megan Thee Stallion</a> · <a
+            href="https://soundcloud.com/megan-thee-stallion/red-wine" title="Red Wine" target="_blank"
+            style="color: #cccccc; text-decoration: none;">Red Wine</a></div>
         <slot />
         <footer class="footer">
           <div class="row g-0 justify-content-between fs--1 mt-4 mb-3">

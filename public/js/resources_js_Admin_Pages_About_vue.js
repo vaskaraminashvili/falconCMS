@@ -30,12 +30,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _About_vue_vue_type_template_id_5e0efad4__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./About.vue?vue&type=template&id=5e0efad4 */ "./resources/js/Admin/Pages/About.vue?vue&type=template&id=5e0efad4");
-/* harmony import */ var D_wamp_www_falconCms_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var D_wamp64_www_falconCms_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 const script = {}
 
 ;
-const __exports__ = /*#__PURE__*/(0,D_wamp_www_falconCms_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_1__["default"])(script, [['render',_About_vue_vue_type_template_id_5e0efad4__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Admin/Pages/About.vue"]])
+const __exports__ = /*#__PURE__*/(0,D_wamp64_www_falconCms_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_1__["default"])(script, [['render',_About_vue_vue_type_template_id_5e0efad4__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Admin/Pages/About.vue"]])
 /* hot reload */
 if (false) {}
 

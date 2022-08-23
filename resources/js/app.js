@@ -2,7 +2,7 @@ import route from 'ziggy-js'
 import { createApp, h } from 'vue'
 import { createInertiaApp, Head, Link } from '@inertiajs/inertia-vue3'
 import { InertiaProgress } from '@inertiajs/progress'
-import Layout from "@/Admin/Shared/Layout/Layout.vue"
+import Layout from "./Admin/Shared/Layout/Layout.vue"
 import WebLayout from "@/Web/Shared/Layout/Layout.vue"
 import Card from "@/Admin/Shared/Components/Card.vue"
 
@@ -27,6 +27,7 @@ createInertiaApp({
       page = (await import(`./Web/Pages/${name}`)).default
       page.layout ??= WebLayout // if page does not have custom layout apply default
     }
+    page.layout = Layout
     return page
   },
   setup({ el, App, props, plugin }) {
@@ -39,7 +40,7 @@ createInertiaApp({
     const URL = props.initialPage.url;
     console.log(URL);
     if (URL.startsWith('/admin')) {// here make auto loading of components for admin part
-      app.component('Card' , Card);
+      app.component('Card', Card);
     }
     app.mount(el);
   }
